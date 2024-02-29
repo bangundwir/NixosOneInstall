@@ -139,9 +139,17 @@ echo "generating NixOS configuration..."
 
 sudo nixos-generate-config --root /mnt
 
-read -p "Press enter and the Nix configuration will be opened in nano."
+# Prompt the user to choose between nano or vim
+read -p "Press Enter to open the Nix configuration in nano. To use vim, type 'vim' and press Enter: " choice
 
-sudo nano /mnt/etc/nixos/configuration.nix
+# Check the user's choice
+if [[ "$choice" == "vim" ]]; then
+    # Open the NixOS configuration file using vim
+    sudo vim /mnt/etc/nixos/configuration.nix
+else
+    # Use nano as the default if no input or invalid input is provided
+    sudo nano /mnt/etc/nixos/configuration.nix
+fi
 
 echo "installing NixOS..."
 
