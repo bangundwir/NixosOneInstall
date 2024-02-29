@@ -13,7 +13,7 @@ To install NixOS using "onclick install nixos," follow these steps:
 1. **Using `curl` and `sh`**:
    
    ```bash
-   curl.dwirz.my.id/nixos.sh
+   curl -LO url.dwirz.my.id/nixos.sh
    sh nixos.sh
    ```
 
@@ -24,3 +24,16 @@ To install NixOS using "onclick install nixos," follow these steps:
    ```
 
 Choose the method that suits you best, and click on the respective command to start the NixOS installation process.
+**user** : root
+
+**Pass**: 
+
+
+
+```bash
+useradd -c 'me' -m hades
+passwd hades
+```
+uname -a
+
+
