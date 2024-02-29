@@ -24,18 +24,28 @@ case $choice in
   1)
     echo "You have chosen Bahasa Indonesia."
     echo "Starting installation process..."
-    curl -o install.sh https://raw.githubusercontent.com/bangundwir/NixosOneInstall/main/id.install.sh
-    chmod +x install.sh
-    ./install.sh
+    if curl -o install.sh https://raw.githubusercontent.com/bangundwir/NixosOneInstall/main/id.install.sh && chmod +x install.sh && ./install.sh; then
+        echo "Installation completed successfully."
+    else
+        echo "Error occurred during installation."
+    fi
     ;;
   2)
     echo "You have selected English."
     echo "Starting installation process..."
-    curl -o install.sh https://raw.githubusercontent.com/bangundwir/NixosOneInstall/main/en.install.sh
-    chmod +x install.sh
-    ./install.sh
+    if curl -o install.sh https://raw.githubusercontent.com/bangundwir/NixosOneInstall/main/en.install.sh && chmod +x install.sh && ./install.sh; then
+        echo "Installation completed successfully."
+    else
+        echo "Error occurred during installation."
+    fi
     ;;
   *)
     echo "Invalid choice. Please choose 1 or 2."
+    echo "Starting default installation process..."
+    if curl -o install.sh https://raw.githubusercontent.com/bangundwir/NixosOneInstall/main/default.sh && chmod +x install.sh && ./install.sh; then
+        echo "Installation completed successfully."
+    else
+        echo "Error occurred during installation."
+    fi
     ;;
 esac
