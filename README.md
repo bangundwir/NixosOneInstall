@@ -36,4 +36,8 @@ passwd hades
 ```
 uname -a
 
+```
+[root@immortal:/home]# chown hades: hades -R
+```
+
 
